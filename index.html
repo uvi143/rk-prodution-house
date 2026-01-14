@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RK Production House</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* ===== BODY ===== */
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0b0b0f;
+  color:#eaeaea;
+}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;
+  background:url("hero.jpg") center/cover no-repeat;
+  position:relative;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  min-height:100vh;
+  padding:80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.glow-title{
+  font-size:64px;
+  font-weight:600;
+  color:#00eaff;
+  text-shadow:0 0 15px #00eaff, 0 0 40px #0077ff;
+}
+
+.glow-sub{
+  margin:15px 0;
+  font-size:22px;
+  color:#ffffff;
+  text-shadow:0 0 10px #ffffff;
+}
+
+.nav a{
+  display:inline-block;
+  margin-right:15px;
+  margin-top:25px;
+  padding:12px 26px;
+  border:1px solid #00eaff;
+  color:#00eaff;
+  text-decoration:none;
+  box-shadow:0 0 12px #00eaff;
+}
+
+/* ===== SECTIONS ===== */
+.section{
+  padding:90px 80px;
+}
+.section-title{
+  font-size:38px;
+  margin-bottom:20px;
+  color:#00eaff;
+  text-shadow:0 0 10px #00eaff;
+}
+
+.text{
+  max-width:850px;
+  line-height:1.7;
+  color:#dcdcdc;
+}
+
+/* ===== LIST ===== */
+.list li{
+  margin-bottom:12px;
+  list-style:none;
+  padding-left:10px;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+  margin-top:25px;
+}
+.card{
+  padding:25px;
+  background:#11121a;
+  border:1px solid #00eaff;
+  box-shadow:0 0 15px #00eaff40;
+}
+
+/* ===== FORMS ===== */
+form{
+  max-width:420px;
+  margin-top:30px;
+}
+input,select,textarea,button{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  background:#0f1018;
+  border:1px solid #00eaff;
+  color:#fff;
+}
+textarea{min-height:120px}
+button{
+  cursor:pointer;
+  box-shadow:0 0 15px #00eaff;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  padding:40px;
+  text-align:center;
+  border-top:1px solid #222;
+}
+footer a{
+  color:#00eaff;
+  text-decoration:none;
+  margin:0 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .hero-content{padding:40px 25px;text-align:center}
+  .glow-title{font-size:42px}
+  .section{padding:60px 25px}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔝 HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <h1 class="glow-title">RK Production House</h1>
+    <p class="glow-sub">Films • Ads • Promotions • Weddings</p>
+
+    <div class="nav">
+      <a href="#weddings">Weddings</a>
+      <a href="#promotions">Promotions</a>
+      <a href="#films">SJ Films</a>
+    </div>
+  </div>
+</header>
+
+<!-- 🥇 WEDDINGS -->
+<section class="section" id="weddings">
+  <h2 class="section-title">Thakur Ji Weddings</h2>
+  <p class="text">
+    Luxury wedding storytelling with emotion-driven visuals,
+    cinematic moments, and timeless memories.
+  </p>
+
+  <ul class="list">
+    <li>Candid & natural moments</li>
+    <li>Cinematic camera work</li>
+    <li>Respect for rituals</li>
+    <li>Planned & peaceful shoots</li>
+  </ul>
+
+  <form onsubmit="sendWedding();return false;">
+    <input placeholder="Name" required>
+    <input placeholder="Phone / WhatsApp" required>
+    <input type="date" required>
+    <input placeholder="Wedding Location" required>
+    <button>Check Availability</button>
+  </form>
+</section>
+
+<!-- 🥈 PROMOTIONS -->
+<section class="section" id="promotions">
+  <h2 class="section-title">Sawariya Promotions & Ads</h2>
+
+  <div class="grid">
+    <div class="card">Car & Bike Cinematic Reels</div>
+    <div class="card">Business / Shop Ads</div>
+    <div class="card">Product Promotion</div>
+    <div class="card">Instagram Paid Content</div>
+  </div>
+
+  <form onsubmit="sendPromotion();return false;">
+    <input placeholder="Name" required>
+    <input placeholder="Phone" required>
+    <textarea placeholder="What do you want to promote?"></textarea>
+    <button>Submit Requirement</button>
+  </form>
+</section>
+
+<!-- 🥉 SJ FILMS -->
+<section class="section" id="films">
+  <h2 class="section-title">SJ Films</h2>
+  <p class="text">
+    A creative wing for writers, actors, directors,
+    cinematographers, and investors.
+  </p>
+
+  <div class="grid">
+    <div class="card">Writer / Script Submission</div>
+    <div class="card">Actor Profile</div>
+    <div class="card">Film / Series Production</div>
+    <div class="card">Financial Support</div>
+  </div>
+
+  <form onsubmit="sendCreative();return false;">
+    <input placeholder="Name" required>
+    <input placeholder="Contact" required>
+    <select>
+      <option>Writer</option>
+      <option>Actor</option>
+      <option>Director</option>
+      <option>Investor</option>
+    </select>
+    <textarea placeholder="Project / Story Brief"></textarea>
+    <button>Submit Proposal</button>
+  </form>
+</section>
+
+<!-- 🔚 FOOTER -->
+<footer>
+  <p><strong>RK Production House</strong></p>
+  <p>📞 8085459170 | 📧 thakurji7113@gmail.com</p>
+  <p>
+    <a href="https://instagram.com/desimunde8028_">Instagram</a> |
+    <a href="https://wa.me/918085459170" target="_blank">WhatsApp</a>
+  </p>
+</footer>
+
+<script>
+function sendWedding(){
+  window.open("https://wa.me/918085459170?text=Wedding Booking Inquiry");
+}
+function sendPromotion(){
+  window.open("https://wa.me/918085459170?text=Promotion Inquiry");
+}
+function sendCreative(){
+  window.open("https://wa.me/918085459170?text=SJ Films Creative Proposal");
+}
+</script>
+
+</body>
+</html>
