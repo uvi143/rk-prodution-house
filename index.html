@@ -1,25 +1,38 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>RK Production House</title>
+<title>RK Production House | Wedding Photography & Films</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- SEO -->
+<meta name="description" content="RK Production House – Luxury Wedding Photography, Cinematic Films, Promotions & Ads">
+<meta name="keywords" content="RK Production House, Wedding Photography, Cinematic Video, Wedding Films, Ads, Promotions">
+<meta name="author" content="RK Production House">
+<meta name="robots" content="index, follow">
 
 <!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-/* ===== RESET ===== */
 *{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 
-/* ===== BODY ===== */
 body{
   font-family:'Poppins',sans-serif;
   background:#0b0b0f;
   color:#eaeaea;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
   min-height:100vh;
   background:url("hero.jpg") center/cover no-repeat;
@@ -45,14 +58,11 @@ body{
   font-size:64px;
   font-weight:600;
   color:#00eaff;
-  text-shadow:0 0 15px #00eaff, 0 0 40px #0077ff;
+  text-shadow:0 0 15px #00eaff,0 0 40px #0077ff;
 }
-
 .glow-sub{
   margin:15px 0;
   font-size:22px;
-  color:#ffffff;
-  text-shadow:0 0 10px #ffffff;
 }
 
 .nav a{
@@ -66,31 +76,24 @@ body{
   box-shadow:0 0 12px #00eaff;
 }
 
-/* ===== SECTIONS ===== */
-.section{
-  padding:90px 80px;
-}
+/* SECTIONS */
+.section{padding:90px 80px}
 .section-title{
   font-size:38px;
   margin-bottom:20px;
   color:#00eaff;
   text-shadow:0 0 10px #00eaff;
 }
+.text{max-width:850px;line-height:1.7}
 
-.text{
-  max-width:850px;
-  line-height:1.7;
-  color:#dcdcdc;
-}
-
-/* ===== LIST ===== */
+/* LIST */
 .list li{
-  margin-bottom:12px;
   list-style:none;
+  margin-bottom:10px;
   padding-left:10px;
 }
 
-/* ===== GRID ===== */
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -104,11 +107,17 @@ body{
   box-shadow:0 0 15px #00eaff40;
 }
 
-/* ===== FORMS ===== */
-form{
-  max-width:420px;
-  margin-top:30px;
+/* GALLERY */
+.gallery img{
+  width:100%;
+  border:2px solid #00eaff;
+  box-shadow:0 0 15px #00eaff40;
+  transition:.4s;
 }
+.gallery img:hover{transform:scale(1.05)}
+
+/* FORM */
+form{max-width:420px;margin-top:30px}
 input,select,textarea,button{
   width:100%;
   padding:12px;
@@ -123,19 +132,28 @@ button{
   box-shadow:0 0 15px #00eaff;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   padding:40px;
   text-align:center;
   border-top:1px solid #222;
 }
-footer a{
-  color:#00eaff;
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  padding:15px 18px;
+  border-radius:50%;
+  font-size:22px;
+  box-shadow:0 0 15px #25d366;
   text-decoration:none;
-  margin:0 8px;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media(max-width:768px){
   .hero-content{padding:40px 25px;text-align:center}
   .glow-title{font-size:42px}
@@ -147,7 +165,7 @@ footer a{
 
 <body>
 
-<!-- 🔝 HERO -->
+<!-- HERO -->
 <header class="hero">
   <div class="hero-content">
     <h1 class="glow-title">RK Production House</h1>
@@ -156,18 +174,16 @@ footer a{
     <div class="nav">
       <a href="#weddings">Weddings</a>
       <a href="#promotions">Promotions</a>
+      <a href="#gallery">Gallery</a>
       <a href="#films">SJ Films</a>
     </div>
   </div>
 </header>
 
-<!-- 🥇 WEDDINGS -->
+<!-- WEDDINGS -->
 <section class="section" id="weddings">
   <h2 class="section-title">Thakur Ji Weddings</h2>
-  <p class="text">
-    Luxury wedding storytelling with emotion-driven visuals,
-    cinematic moments, and timeless memories.
-  </p>
+  <p class="text">Luxury wedding storytelling with cinematic visuals.</p>
 
   <ul class="list">
     <li>Candid & natural moments</li>
@@ -185,7 +201,7 @@ footer a{
   </form>
 </section>
 
-<!-- 🥈 PROMOTIONS -->
+<!-- PROMOTIONS -->
 <section class="section" id="promotions">
   <h2 class="section-title">Sawariya Promotions & Ads</h2>
 
@@ -204,18 +220,27 @@ footer a{
   </form>
 </section>
 
-<!-- 🥉 SJ FILMS -->
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <h2 class="section-title">Our Work</h2>
+
+  <div class="grid gallery">
+    <img src="g1.jpg">
+    <img src="g2.jpg">
+    <img src="g3.jpg">
+    <img src="g4.jpg">
+  </div>
+</section>
+
+<!-- SJ FILMS -->
 <section class="section" id="films">
   <h2 class="section-title">SJ Films</h2>
-  <p class="text">
-    A creative wing for writers, actors, directors,
-    cinematographers, and investors.
-  </p>
+  <p class="text">Creative wing for writers, actors, directors & investors.</p>
 
   <div class="grid">
-    <div class="card">Writer / Script Submission</div>
+    <div class="card">Writer / Script</div>
     <div class="card">Actor Profile</div>
-    <div class="card">Film / Series Production</div>
+    <div class="card">Film Production</div>
     <div class="card">Financial Support</div>
   </div>
 
@@ -233,15 +258,24 @@ footer a{
   </form>
 </section>
 
-<!-- 🔚 FOOTER -->
+<!-- TESTIMONIALS -->
+<section class="section">
+  <h2 class="section-title">Client Reviews</h2>
+
+  <div class="grid">
+    <div class="card">“Wedding film bilkul movie jaisi thi ❤️”</div>
+    <div class="card">“Professional team & premium output”</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <p><strong>RK Production House</strong></p>
   <p>📞 8085459170 | 📧 thakurji7113@gmail.com</p>
-  <p>
-    <a href="https://instagram.com/desimunde8028_">Instagram</a> |
-    <a href="https://wa.me/918085459170" target="_blank">WhatsApp</a>
-  </p>
 </footer>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp" href="https://wa.me/918085459170" target="_blank">💬</a>
 
 <script>
 function sendWedding(){
